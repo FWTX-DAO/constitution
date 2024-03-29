@@ -1,3 +1,15 @@
+# Architecture
+```mermaid
+flowchart TD
+    A[FW DAO DUNA Board] -->|CF: Tobalo - F: Denis O'Neil - AOF: Summer Little| B(*fwtx.city\nfwtx.dao.eth \n Treasury)
+    B --> |Future State| C{FWTX DAO SteerCo}
+    C -->|Commerce| D[ChamberDAO]
+    C -->|Culture| E[SportsDAO]
+    C -->|Public Goods| F[LibraryDAO]
+    D --> G[Hispanic]
+    D --> H[Non-Hispanic]
+    E --> I[VaqueroDAO Wordld Cup]
+```
 ## Preamble
 
 We are a City DAO dedicated to the promotion and integration of Web3 technologies into everyday civic life. By fostering education and collaboration, we aim to create a more informed and equitable digital future. We are a grassroots organization bound to Fort Worth Texas and dedicated to improving the Fort Worth community through Web3.
