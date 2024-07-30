@@ -61,3 +61,84 @@ The DAO's progress is measured against the roadmap as found on the FWTX DAO offi
 The DAO and its members commit to upholding ethical standards, including data privacy, anti-discrimination, and anti-harassment policies.
 
 Members shall adhere to all relevant local and national laws and regulations pertaining to their activities within the DAO.
+
+
+## City DAO Data Ontology 
+```mermaid
+classDiagram
+    class CityGovernance {
+        +Department[] departments
+        +Policy[] policies
+        +Budget budget
+        +Citizen[] citizens
+    }
+
+    class Department {
+        +String name
+        +Employee[] staff
+        +Project[] projects
+        +Dataset[] openDataSets
+        +API[] apis
+    }
+
+    class PublicSafety {
+        +EmergencyService[] services
+        +CrimeStatistics stats
+        +SafetyProgram[] programs
+    }
+
+    class Infrastructure {
+        +TransportationSystem transport
+        +UtilityNetwork utilities
+        +ConstructionProject[] projects
+    }
+
+    class EnvironmentSustainability {
+        +GreenSpace[] parks
+        +RecyclingProgram recycling
+        +AirQualityMonitor[] monitors
+    }
+
+    class EconomicDevelopment {
+        +Business[] localBusinesses
+        +JobMarket jobStats
+        +InvestmentOpportunity[] opportunities
+    }
+
+    class EducationCulture {
+        +School[] schools
+        +Library[] libraries
+        +CulturalEvent[] events
+    }
+
+    class HealthWelfare {
+        +Hospital[] hospitals
+        +SocialProgram[] programs
+        +PublicHealthCampaign[] campaigns
+    }
+
+    class Dataset {
+        +String name
+        +String description
+        +String[] dataFields
+        +String updateFrequency
+        +String accessUrl
+    }
+
+    class API {
+        +String name
+        +String version
+        +String[] endpoints
+        +String documentationUrl
+    }
+
+    CityGovernance "1" *-- "many" Department
+    Department <|-- PublicSafety
+    Department <|-- Infrastructure
+    Department <|-- EnvironmentSustainability
+    Department <|-- EconomicDevelopment
+    Department <|-- EducationCulture
+    Department <|-- HealthWelfare
+    Department "1" *-- "many" Dataset
+    Department "1" *-- "many" API
+```
